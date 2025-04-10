@@ -37,4 +37,4 @@ jobs:
           echo "access_token = ${GITHUB_ACCESS_TOKEN}" >> config/config.ini
 
       - name: Run tests
-        run: pytest -v
+        run: pytest
