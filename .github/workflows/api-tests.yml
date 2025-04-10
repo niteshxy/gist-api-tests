@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.11.6'
 
       - name: Install dependencies
         run: |
@@ -36,15 +36,5 @@ jobs:
           echo "base_url = https://api.github.com" >> config/config.ini
           echo "access_token = ${GITHUB_ACCESS_TOKEN}" >> config/config.ini
 
-      - name: Print Current Working Directory
-        run: pwd
-
-      - name: List Directory
-        run: ls
-        
-      - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$(pwd)/helpers" >> $GITHUB_ENV
-
       - name: Run tests
-        run: |
-          pytest tests/test_gist_api.py
+        run: pytest 
