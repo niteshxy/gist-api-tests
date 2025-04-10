@@ -39,5 +39,8 @@ jobs:
       - name: Print Current Working Directory
         run: pwd
 
+      - name: List Directory
+        run: ls
+
       - name: Run tests
         run: pytest 
