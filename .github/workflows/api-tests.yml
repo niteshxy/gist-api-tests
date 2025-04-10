@@ -36,5 +36,11 @@ jobs:
           echo "base_url = https://api.github.com" >> config/config.ini
           echo "access_token = ${GITHUB_ACCESS_TOKEN}" >> config/config.ini
 
+      - name: Print Current Working Directory
+        run: pwd
+
+      - name: List Directory
+        run: ls
+
       - name: Run tests
-        run: pytest
+        run: pytest 
