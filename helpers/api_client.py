@@ -3,7 +3,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class HttpClient:
+class api_client:
     def __init__(self, base_url, access_token=None):
         self.base_url = base_url
         self.headers = {'Accept': 'application/vnd.github+json'}

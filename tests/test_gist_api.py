@@ -1,13 +1,14 @@
 import pytest
 import json
-from helpers.api_client import HttpClient
 from configparser import ConfigParser
+
+from helpers.api_client import api_client
 
 config = ConfigParser()
 config.read('config/config.ini')
 base_url = config['github']['base_url']
 access_token = config['github']['access_token']
-client = HttpClient(base_url, access_token)
+client = api_client(base_url, access_token)
 gist_payloads = json.load(open('test_data/test_data.json'))
 
 @pytest.fixture
