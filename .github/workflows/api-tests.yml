@@ -41,6 +41,9 @@ jobs:
 
       - name: List Directory
         run: ls
+        
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)/helpers" >> $GITHUB_ENV
 
       - name: Run tests
         run: |
