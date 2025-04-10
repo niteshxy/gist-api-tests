@@ -43,6 +43,5 @@ jobs:
         run: ls
 
       - name: Run tests
-        working-directory: ./gist-api-tests
         run: |
           pytest tests/test_gist_api.py
